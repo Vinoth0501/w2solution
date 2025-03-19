@@ -1,0 +1,28 @@
+.css-5c1adp-MuiContainer-root {
+  padding: 0px !important;
+}
+.leaf-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  max-width: 1000px; /* Limit max size */
+  height: auto;
+  overflow: hidden;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .leaf-bg {
+    width: 80vw; /* Make it smaller on smaller screens */
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaf-bg {
+    width: 90vw;
+    max-width: 500px;
+  }
+}

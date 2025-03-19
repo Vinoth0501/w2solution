@@ -1,0 +1,122 @@
+:root {
+  --font-size-80: 80px;
+  --font-size-50: 50px;
+  --font-size-30: 30px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+
+  --font-weight-700: 700;
+  --font-weight-600: 600;
+  --font-weight-bold: bold;
+  --font-weight-400: 400;
+
+  --bg-yellow: #f9b800;
+  --bg-black: #262626;
+  --bg-white: #ffffff;
+
+  --text-black: #262626;
+  --text-yellow: #f9b800;
+  --text-white: #ffffff;
+}
+
+@media (max-width: 1599px) {
+  :root {
+    --font-size-80: 75px;
+    --font-size-50: 45px;
+    --font-size-30: 28px;
+    --font-size-24: 22px;
+    --font-size-20: 18px;
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --font-size-80: 65px;
+    --font-size-50: 40px;
+    --font-size-30: 25px;
+    --font-size-24: 20px;
+    --font-size-20: 18px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --font-size-80: 55px;
+    --font-size-50: 38px;
+    --font-size-30: 22px;
+    --font-size-24: 18px;
+    --font-size-20: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-80: clamp(32px, 6vw, 50px);
+    --font-size-50: clamp(28px, 5vw, 40px);
+    --font-size-30: clamp(18px, 4vw, 28px);
+    --font-size-24: clamp(14px, 3.5vw, 22px);
+    --font-size-20: clamp(14px, 3vw, 18px);
+  }
+}
+
+.custom-font-80 {
+  font-size: var(--font-size-80);
+}
+.custom-font-50 {
+  font-size: var(--font-size-50);
+}
+.custom-font-30 {
+  font-size: var(--font-size-30);
+}
+.custom-font-24 {
+  font-size: var(--font-size-24);
+}
+.custom-font-20 {
+  font-size: var(--font-size-20);
+}
+
+.custom-font-700 {
+  font-weight: var(--font-weight-700);
+}
+.custom-font-600 {
+  font-weight: var(--font-weight-600);
+}
+.custom-font-bold {
+  font-weight: var(--font-weight-bold);
+}
+.custom-font-400 {
+  font-weight: var(--font-weight-400);
+}
+
+.bg-yw {
+  background-color: var(--bg-yellow);
+}
+.bg-bk {
+  background-color: var(--bg-black);
+}
+.bg-we {
+  background-color: var(--bg-white);
+}
+
+.text-bk {
+  color: var(--text-black);
+}
+.text-yw {
+  color: var(--text-yellow);
+}
+.text-we {
+  color: var(--text-white);
+}
+:root {
+  --font-family: "Segoe UI", sans-serif;
+}
+
+* {
+  font-family: var(--font-family) !important;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: var(--font-family) !important;
+  background-color: rgba(249, 184, 0, 0.08) !important;
+}
