@@ -34,6 +34,9 @@
 .css-okxy8o-MuiPaper-root-MuiAppBar-root {
   position: static !important;
 }
+.css-edyhab {
+  position: static !important;
+}
 @media (max-width: 900px) {
   .logo-img {
     height: 45px;
