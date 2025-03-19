@@ -11,7 +11,7 @@ import lgLeftArrow from "./TestimonialLeftArrow/trending_flat.png";
 import lgRightArrow from "./TestimonialRightArrow/rightArrow.png";
 import triangle from "./FeaturesImage/Vector3.png";
 import textBox from "./FeaturesImage/Vector4.png";
-import threeDOt from "./FeaturesImage/threeDOt.jpg";
+import threeDOt from "./FeaturesImage/threeDot.jpg";
 import cart from "./FeaturesImage/cart.jpg";
 import textArea from "./FeaturesImage/textArea.jpg";
 import heart from "./FeaturesImage/heart.jpg";
