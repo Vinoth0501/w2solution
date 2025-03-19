@@ -4,6 +4,7 @@ import { Container, Card, Skeleton, Box } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { image } from "./assets";
+import "./App.css";
 
 const HeroSection = lazy(() => import("./components/HeroSection"));
 const Features = lazy(() => import("./components/Features"));
