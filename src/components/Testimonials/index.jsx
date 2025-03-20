@@ -171,7 +171,7 @@ const Testimonials = () => {
                 <Box
                   display="flex"
                   justifyContent={{ xs: "center", md: "flex-start" }}
-                  gap={2}
+                  gap={3}
                   mt={2}
                 >
                   <img
