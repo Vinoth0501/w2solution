@@ -11,21 +11,49 @@ const Features = lazy(() => import("./components/Features"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
 
 const SkeletonLoader = () => (
-  <Card
-    sx={{
-      width: "100%",
-      height: "80vh",
-      p: { xs: "20px 10px", sm: "20px 30px", md: "35px 50px", lg: "45px 70px" },
-      display: "flex",
-      flexDirection: "column",
-      gap: 2,
-      backgroundColor: "rgba(249, 184, 0, 0.08)",
-    }}
-  >
-    <Skeleton variant="rectangular" width="100%" height="60%" />
-    <Skeleton variant="text" width="80%" height={30} />
-    <Skeleton variant="text" width="60%" height={30} />
-  </Card>
+  <>
+    <Card
+      sx={{
+        width: "100%",
+        height: "80vh",
+        p: {
+          xs: "20px 10px",
+          sm: "20px 30px",
+          md: "35px 50px",
+          lg: "45px 70px",
+        },
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+        backgroundColor: "rgba(249, 184, 0, 0.08)",
+        mb: "40px",
+      }}
+    >
+      <Skeleton variant="rectangular" width="100%" height="60%" />
+      <Skeleton variant="text" width="80%" height={30} />
+      <Skeleton variant="text" width="60%" height={30} />
+    </Card>
+    <Card
+      sx={{
+        width: "100%",
+        height: "80vh",
+        p: {
+          xs: "20px 10px",
+          sm: "20px 30px",
+          md: "35px 50px",
+          lg: "45px 70px",
+        },
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+        backgroundColor: "rgba(249, 184, 0, 0.08)",
+      }}
+    >
+      <Skeleton variant="rectangular" width="100%" height="60%" />
+      <Skeleton variant="text" width="80%" height={30} />
+      <Skeleton variant="text" width="60%" height={30} />
+    </Card>
+  </>
 );
 
 function App() {
