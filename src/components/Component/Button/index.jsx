@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Button as MUIButton, Typography, Box } from "@mui/material";
 import gsap from "gsap";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Button = ({
   text,
@@ -90,14 +91,24 @@ const Button = ({
 
       {showIcon && (
         <Box ref={iconRef} sx={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={icon}
-            alt="button-icon"
-            style={{
-              objectFit: "contain",
-              width: "24px",
-            }}
-          />
+          {bgColor === "#262626" ? (
+            <ArrowForwardIcon sx={{ color: "white", fontSize: 24 }} />
+          ) : (
+            <img
+              src={
+                bgColor === "#262626" ? (
+                  <ArrowForwardIcon sx={{ color: "white" }} />
+                ) : (
+                  icon
+                )
+              }
+              alt="button-icon"
+              style={{
+                objectFit: "contain",
+                width: "24px",
+              }}
+            />
+          )}
         </Box>
       )}
     </MUIButton>

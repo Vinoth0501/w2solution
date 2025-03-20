@@ -14,7 +14,6 @@ const Navbar = () => {
 
   return (
     <AppBar
-      // position="fixed"
       sx={{
         backgroundColor: "#fff9e6",
         boxShadow: "none",

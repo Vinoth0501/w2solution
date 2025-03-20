@@ -75,8 +75,8 @@ const HeroSection = () => {
           </h5>
           <h1 className="text-bk custom-font-700 custom-font-80 d-flex align-items-center justify-content-center flex-wrap">
             <span className="me-3">Cursus Consequat</span>{" "}
-            <span className="me-3 d-block d-md-none">Cursus</span>
-            <motion.span>{displayText}</motion.span>
+            <span className="me-3 d-block d-md-none">Cursus </span>
+            <motion.span className="text-bk">{displayText}</motion.span>
             <motion.span
               className="blink-cursor"
               style={{

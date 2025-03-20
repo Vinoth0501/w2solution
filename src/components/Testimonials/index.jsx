@@ -1,10 +1,38 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
 import { gsap } from "gsap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { image } from "../../assets";
 
+const testimonialsData = [
+  {
+    id: 1,
+    name: "Holly Davidson",
+    feedback:
+      "Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.",
+  },
+  {
+    id: 2,
+    name: "Michael Smith",
+    feedback:
+      "Aenean sit amet ex vel elit sagittis varius. Duis efficitur, massa at malesuada gravida, justo quam sagittis orci, in vulputate felis est eget nisi.",
+  },
+  {
+    id: 3,
+    name: "Sophia Miller",
+    feedback:
+      "Praesent facilisis dolor vel orci tristique, ac tincidunt urna scelerisque. Integer euismod, felis at venenatis scelerisque, turpis sapien dapibus felis.",
+  },
+  {
+    id: 4,
+    name: "Daniel Johnson",
+    feedback:
+      "Vestibulum posuere urna a felis viverra, at posuere ligula pharetra. Nunc euismod, ligula a pretium fermentum, dui risus hendrerit justo.",
+  },
+];
+
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const cardRef = useRef(null);
   const textRef = useRef(null);
   const overlayRef = useRef(null);
@@ -53,6 +81,16 @@ const Testimonials = () => {
     };
   }, []);
 
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <section className="testimonials">
       <Box
@@ -89,7 +127,6 @@ const Testimonials = () => {
               filter: "brightness(40%)",
               transform: "translateY(100%)",
               opacity: "0.9",
-
               zIndex: 0,
             }}
           />
@@ -113,7 +150,6 @@ const Testimonials = () => {
               />
             </Grid>
 
-            {/* Content - Centers Text on Mobile */}
             <Grid item xs={12} md={7}>
               <CardContent
                 ref={textRef}
@@ -126,15 +162,13 @@ const Testimonials = () => {
                   What our customers thought?
                 </p>
                 <p className="text-bk custom-font-400 custom-font-30">
-                  Euismod magna id purus eget nunc ligula suspendisse dui netus.
-                  Condimentum blandit rutrum at mauris enim pulvinar duis etiam
-                  duis.
+                  {testimonialsData[currentIndex].feedback}
                 </p>
                 <p className="text-bk custom-font-700 custom-font-24">
-                  Holly Davidson
+                  {testimonialsData[currentIndex].name}
                 </p>
 
-                {/* <Box
+                <Box
                   display="flex"
                   justifyContent={{ xs: "center", md: "flex-start" }}
                   gap={2}
@@ -142,25 +176,29 @@ const Testimonials = () => {
                 >
                   <img
                     src={image.lgLeftArrow}
-                    alt="User"
+                    alt="Previous"
                     style={{
                       borderRadius: "50%",
                       width: "100%",
                       maxWidth: "38px",
                       height: "16.6px",
+                      cursor: "pointer",
                     }}
+                    onClick={handlePrev}
                   />
                   <img
                     src={image.lgRightArrow}
-                    alt="User"
+                    alt="Next"
                     style={{
                       borderRadius: "50%",
                       width: "100%",
                       maxWidth: "38px",
                       height: "16.6px",
+                      cursor: "pointer",
                     }}
+                    onClick={handleNext}
                   />
-                </Box> */}
+                </Box>
               </CardContent>
             </Grid>
           </Grid>

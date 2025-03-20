@@ -37,7 +37,6 @@ const Dropdown = ({ options, showFlags = false }) => {
                   style={{ marginRight: 8 }}
                 />
               )}
-              {/* {option.alt} */}
             </>
           ) : (
             option.alt

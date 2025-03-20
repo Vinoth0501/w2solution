@@ -7,15 +7,14 @@
   left: 0;
   z-index: 0;
   width: 100%;
-  max-width: 1000px; /* Limit max size */
+  max-width: 1000px;
   height: auto;
   overflow: hidden;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .leaf-bg {
-    width: 80vw; /* Make it smaller on smaller screens */
+    width: 80vw;
     max-width: 600px;
   }
 }

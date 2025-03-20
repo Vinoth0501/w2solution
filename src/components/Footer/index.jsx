@@ -30,7 +30,6 @@ const Footer = () => {
         }}
       >
         <div className="row">
-          {/* Text Section */}
           <div className="col-12 col-lg-8 text-center text-lg-start">
             <p className="custom-font-700 custom-font-50">
               Vulputate et pulvinar ethre Suspendisse tellus consectetur
@@ -51,7 +50,6 @@ const Footer = () => {
 
         <hr className="border-light my-4" />
 
-        {/* Footer Bottom Section */}
         <Grid
           container
           alignItems="center"
